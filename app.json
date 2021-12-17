@@ -1,0 +1,12 @@
+{
+  "name": "api-consumer-app",
+  "displayName": "api-consumer-app",
+  "expo": {
+    "name": "api-consumer-app",
+    "slug": "api-consumer-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
