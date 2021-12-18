@@ -5,3 +5,9 @@ export interface UserType {
   last_name: string;
   avatar: string;
 }
+
+export interface CountryType {
+  code: string;
+  name: string;
+  fronteiras: string[];
+}

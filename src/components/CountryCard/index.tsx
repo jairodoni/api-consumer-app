@@ -1,21 +1,35 @@
 import React from 'react';
-import { CountryInfo, CountryText, Info } from './styles';
+import { CountryType } from '../../global/types/types';
+import { Country, CountryInfo, CountryText, Info } from './styles';
 
-export function CountryCard() {
+interface CountryCardProps {
+  data: CountryType;
+}
+
+export function CountryCard({ data }: CountryCardProps) {
+
   return (
     <CountryInfo>
-      <CountryText>
-        <Info>
-          Name:
-        </Info>
-        {/* {` ${data.first_name} ${data.last_name}`} */}
-      </CountryText>
+      <Country>
+        <CountryText>
+          <Info>
+            Pais:
+          </Info>
+          {` ${data.name}`}
+        </CountryText>
+        <CountryText>
+          <Info>
+            Code:
+          </Info>
+          {` ${data.code}`}
+        </CountryText>
+      </Country>
 
       <CountryText>
         <Info>
-          Email:
+          Fronteiras:
         </Info>
-        {/* {` ${data.email}`} */}
+        {` ${data.fronteiras}`}
       </CountryText>
     </CountryInfo>
   );
