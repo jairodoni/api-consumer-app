@@ -1,0 +1,14 @@
+node_modules
+tsconfig.json
+.flowconfig
+.eslintrc.js
+.watchmanconfig
+babel.config.js
+app.json
+metro.config.js
+.editorconfig
+.buckconfig
+android
+ios
+expo
+__tests__
