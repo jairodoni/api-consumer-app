@@ -29,3 +29,12 @@ export const Title = styled.Text`
   font-size: ${RFValue(18)}px;
   font-family: ${({ theme }) => theme.fonts.regular};
 `;
+
+export const ContainerTransparent = styled.View`
+  background: rgba(0, 0, 0, 0);
+  margin: 20px 0;
+`;
+
+export const Loader = styled.ActivityIndicator`
+  background: rgba(0, 0, 0, 0);
+`;
