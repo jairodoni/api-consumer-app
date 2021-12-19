@@ -7,28 +7,21 @@ interface CountryCardProps {
 }
 
 export function CountryCard({ data }: CountryCardProps) {
-
   return (
     <CountryInfo>
       <Country>
         <CountryText>
-          <Info>
-            Pais:
-          </Info>
+          <Info>Pais:</Info>
           {` ${data.name}`}
         </CountryText>
         <CountryText>
-          <Info>
-            Code:
-          </Info>
+          <Info>Code:</Info>
           {` ${data.code}`}
         </CountryText>
       </Country>
 
       <CountryText>
-        <Info>
-          Fronteiras:
-        </Info>
+        <Info>Fronteiras:</Info>
         {` ${data.fronteiras}`}
       </CountryText>
     </CountryInfo>

@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import { Container } from './styles';
-import { UserType } from '../../global/types/types';
-import { UserCard } from '../../components/UserCard';
-import { UsersList, Title, CardList } from './styles';
-import { userApi } from '../../services/userApi';
-import { ActivityIndicator, View, Text } from 'react-native';
+import { Text, FlatList } from 'react-native';
+import { getBottomSpace } from 'react-native-iphone-x-helper';
 
+import { UserType } from '../../global/types/types';
+import { userApi } from '../../services/userApi';
+import { UserCard } from '../../components/UserCard';
+import { Loading } from '../../components/Loading';
+
+import { Container, UsersList, Title } from './styles';
 
 export function Users() {
-  const [users, setUsers] = useState<UserType[]>([])
+  const [users, setUsers] = useState<UserType[]>([]);
   const [total, setTotal] = useState(0);
-  const [page, setPage] = useState(1)
-  const [loading, setLoading] = useState(false)
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
 
   async function loadUsers() {
     if (loading) {
@@ -31,36 +33,28 @@ export function Users() {
     setUsers([...users, ...data]);
     setTotal(response.data.total);
     setPage(page + 1);
-
-    await new Promise((r) => setTimeout(r, 1500));
-
     setLoading(false);
   }
 
   useEffect(() => {
-    loadUsers()
-  }, [])
-
-  const Loading = () => {
-    return (
-      <View style={{ marginVertical: 20 }}>
-        <ActivityIndicator size={27} color="#a9afc5" />
-      </View >
-    )
-  }
+    loadUsers();
+  }, []);
 
   return (
     <Container>
       <UsersList>
         <Title>User List:</Title>
-        <CardList
+        <FlatList
           data={users}
-          keyExtractor={item => `${item.id}`}
+          keyExtractor={(item) => `${item.id}`}
           renderItem={({ item }) => <UserCard data={item} />}
           showsVerticalScrollIndicator={false}
           onEndReached={loadUsers}
-          onEndReachedThreshold={0.05}
-          ListFooterComponent={loading ? Loading() : <Text></Text>}
+          onEndReachedThreshold={0.1}
+          contentContainerStyle={{
+            paddingBottom: getBottomSpace(),
+          }}
+          ListFooterComponent={loading ? <Loading /> : <Text></Text>}
         />
       </UsersList>
     </Container>

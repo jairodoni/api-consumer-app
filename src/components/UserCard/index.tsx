@@ -1,12 +1,6 @@
 import React from 'react';
 import { UserType } from '../../global/types/types';
-import {
-  UserInfo,
-  UserText,
-  Photo,
-  User,
-  Info
-} from './styles';
+import { UserInfo, UserText, Photo, User, Info } from './styles';
 
 interface UserCardProps {
   data: UserType;
@@ -17,16 +11,12 @@ export function UserCard({ data }: UserCardProps) {
     <UserInfo>
       <User>
         <UserText>
-          <Info>
-            Name:
-          </Info>
+          <Info>Name:</Info>
           {` ${data.first_name} ${data.last_name}`}
         </UserText>
 
         <UserText>
-          <Info>
-            Email:
-          </Info>
+          <Info>Email:</Info>
           {` ${data.email}`}
         </UserText>
       </User>

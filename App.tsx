@@ -4,7 +4,6 @@ import AppLoading from 'expo-app-loading';
 
 import { NavigationContainer } from '@react-navigation/native';
 import { AppRoutes } from './src/routes/app.routes';
-import { AppProvider } from './src/contexts/app';
 import { Header } from './src/components/Header';
 
 import theme from './src/global/styles/theme';
@@ -31,12 +30,10 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <AppProvider>
-        <NavigationContainer>
-          <Header />
-          <AppRoutes />
-        </NavigationContainer>
-      </AppProvider>
+      <NavigationContainer>
+        <Header />
+        <AppRoutes />
+      </NavigationContainer>
     </ThemeProvider>
   );
 }

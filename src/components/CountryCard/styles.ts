@@ -19,7 +19,7 @@ export const Info = styled.Text`
   color: ${({ theme }) => theme.colors.text_dark};
 
   font-size: ${RFValue(15)}px;
-  font-family: ${({ theme }) => theme.fonts.regular};
+  font-family: ${({ theme }) => theme.fonts.medium};
 
   margin-left: 5px;
 `;
@@ -28,5 +28,5 @@ export const CountryText = styled.Text`
   color: ${({ theme }) => theme.colors.text};
 
   font-size: ${RFValue(15)}px;
-  font-family: ${({ theme }) => theme.fonts.regular};
+  font-family: ${({ theme }) => theme.fonts.medium};
 `;

@@ -20,14 +20,14 @@ export const Info = styled.Text`
   color: ${({ theme }) => theme.colors.text_dark};
 
   font-size: ${RFValue(13)}px;
-  font-family: ${({ theme }) => theme.fonts.regular};
+  font-family: ${({ theme }) => theme.fonts.medium};
 `;
 
 export const UserText = styled.Text`
   color: ${({ theme }) => theme.colors.text};
 
   font-size: ${RFValue(13)}px;
-  font-family: ${({ theme }) => theme.fonts.regular};
+  font-family: ${({ theme }) => theme.fonts.medium};
 `;
 
 export const Photo = styled.Image`

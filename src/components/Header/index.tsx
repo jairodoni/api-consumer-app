@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  HeaderContainer,
-  LogoTitle,
-  Text,
-} from './styles';
-
+import { HeaderContainer, LogoTitle, Text } from './styles';
 
 export function Header() {
   return (
