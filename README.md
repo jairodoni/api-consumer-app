@@ -92,7 +92,7 @@ $ yarn
 $ expo start
 ```
 
-Em seguida instale o aplicativo do expo no seu smartphone e use o QRCode para abrir e visualizar o Api Consumer. Você pode optar por abrir no emulador tambem.
+Em seguida instale o aplicativo expo no seu smartphone através da sua loja favorita de aplicativos (Play Store, Apple Store, etc...) e use o QRCode para abrir e visualizar o Api Consumer. Você pode optar por abrir pelo emulador tambem.
 
 <br/>
 
