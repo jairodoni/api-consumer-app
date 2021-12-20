@@ -69,9 +69,12 @@
 
 ### Configurações Iniciais
 
-Primeiro, você precisa ter o <kbd>[NodeJS](https://nodejs.org/en/download/)</kbd> instalado na sua máquina.
-
-Após ter o **Node** instalado, Instale as dependências contidas nos arquivos `package.json` que se encontram na raíz do repositório. Para instalar as dependências, basta abrir o terminal no diretório e digitar o comando:
+Primeiro, você precisa ter o <kbd>[NodeJS](https://nodejs.org/en/download/)</kbd> instalado na sua máquina. <br/>
+Segundo, você precisa ter o <kbd>[Expo CLI][expo_cli]</kbd> em sua maquina, instale usando o seguinte comando:
+```sh
+$ npm install -g expo-cli
+```
+Após ter o **Node** e **Expo CLI** instalado, instale agora as dependências contidas nos arquivos `package.json` que se encontram na raíz do repositório. Para instalar as dependências, basta abrir o terminal no diretório e digitar o comando:
 
 ```sh
 # Instalando as dependencias:
@@ -92,7 +95,7 @@ $ yarn
 $ expo start
 ```
 
-Em seguida instale o aplicativo expo no seu smartphone através da sua loja favorita de aplicativos (Play Store, Apple Store, etc...) e use o QRCode para abrir e visualizar o Api Consumer. Você pode optar por abrir pelo emulador tambem.
+Por ultimo instale o aplicativo expo no seu smartphone através da sua loja favorita de aplicativos (Play Store, Apple Store, etc...) e use o QRCode para abrir e visualizar o Api Consumer. Você pode optar por abrir pelo emulador tambem.
 
 <br/>
 
@@ -100,6 +103,7 @@ Em seguida instale o aplicativo expo no seu smartphone através da sua loja favo
 
 [node]: https://nodejs.org/en/
 [expo]: https://expo.dev
+[expo_cli]: https://docs.expo.dev/workflow/expo-cli/
 [react_native]: https://reactnative.dev
 [typescript]: https://www.typescriptlang.org/
 [styled_components]: https://styled-components.com
