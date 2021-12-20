@@ -28,9 +28,9 @@ export function Users() {
 
     const response = await userApi.get(`/users?page=${page}`);
 
-    const data = response.data.data;
+    const contentList = response.data.data;
 
-    setUsers([...users, ...data]);
+    setUsers([...users, ...contentList]);
     setTotal(response.data.total);
     setPage(page + 1);
     setLoading(false);
@@ -48,9 +48,9 @@ export function Users() {
           data={users}
           keyExtractor={(item) => `${item.id}`}
           renderItem={({ item }) => <UserCard data={item} />}
-          showsVerticalScrollIndicator={false}
           onEndReached={loadUsers}
           onEndReachedThreshold={0.1}
+          showsVerticalScrollIndicator={false}
           contentContainerStyle={{
             paddingBottom: getBottomSpace(),
           }}
