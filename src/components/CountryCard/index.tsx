@@ -11,7 +11,7 @@ export function CountryCard({ data }: CountryCardProps) {
     <CountryInfo>
       <Country>
         <CountryText>
-          <Info>Pais:</Info>
+          <Info>Country:</Info>
           {` ${data.name}`}
         </CountryText>
         <CountryText>
@@ -21,7 +21,7 @@ export function CountryCard({ data }: CountryCardProps) {
       </Country>
 
       <CountryText>
-        <Info>Fronteiras:</Info>
+        <Info>Frontiers:</Info>
         {` ${data.fronteiras}`}
       </CountryText>
     </CountryInfo>

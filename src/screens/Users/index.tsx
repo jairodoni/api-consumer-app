@@ -26,7 +26,7 @@ export function Users() {
 
     setLoading(true);
 
-    const response = await userApi.get(`/api/users?page=${page}`);
+    const response = await userApi.get(`/users?page=${page}`);
 
     const data = response.data.data;
 
